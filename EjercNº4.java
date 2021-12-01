@@ -3,17 +3,25 @@ package com.informatorio;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    public static void main(String[] args){
-        int factorial = 1;
-        int numero;
+   public static void main(String[] args) {
 
-        Scanner valor = new Scanner(System.in);
-        System.out.println("Ingrese un numero: ");
-        numero = valor.nextInt();
-        for (int i = numero; i > 0; i--) {
-            factorial = factorial *i;
+       Scanner factorial = new Scanner(System.in);
+       int num ;
+       System.out.println("Calcular el Factorial");
+       System.out.println("Ingrese un número: ");
+       num = factorial.nextInt();
+       factorial.close();
+       System.out.println(num+"! = "+ fact(num));
+           
+    }
+
+    private static int fact(int num) {
+        if(num>1) {
+            return (num * fact(num-1));
         }
-        System.out.println("El factorial del numero " + numero + " es: " + factorial);
+        else 
+            return (1);
+           
     }
 
 }
