@@ -3,18 +3,22 @@ package com.informatorio;
 import java.util.Scanner;
 
 public class Ejercicio8 {
-   public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese su nombre: ");
-        String nombre = sc.nextLine();
-        System.out.println("Ingrese su edad: ");
-        byte edad = sc.nextByte();
-        sc.nextLine();
-        System.out.println("¿Cual es su direccion?: ");
-        String direccion = sc.nextLine();
-        System.out.println("¿Cual es su ciudad?: ");
-        String ciudad = sc.nextLine();
+  public static void main(String[] args) {
+       
+        Scanner introducDatos = new Scanner(System.in);
+        System.out.println("Nombre y Apellido:  ");
+        String nombre = introducDatos.nextLine();         
+        System.out.println("Direccion:  ");
+        String direccion = introducDatos.nextLine();
+        System.out.println("Ciudad:  ");
+        String ciudad = introducDatos.nextLine();
+        System.out.println("Edad:  ");
+        int edad = introducDatos.nextInt();       
+        introducDatos.close();
 
-        System.out.println(ciudad + " - " + direccion + " - " + edad + " - " + nombre);
+        System.out.println(ciudad+ " - " +direccion+ " - " + edad+ " - "+ nombre+ " - ");
+
     }
+
 }
+    
